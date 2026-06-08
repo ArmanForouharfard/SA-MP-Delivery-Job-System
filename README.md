@@ -44,9 +44,7 @@ pawncourse2
 
 ## 📸 Screenshots
 ### Database structure
-![Database structure](gamemodes/Result's screenshots/pawncourse 2 database with customers & delivery history & products tables.png)
 
-<img width="1917" height="984" alt="pawncourse 2 database" src="https://github.com/user-attachments/assets/d435e600-5a00-46b5-901d-14ee3a8c6d96" />
 
 
 
