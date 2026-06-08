@@ -43,9 +43,9 @@ pawncourse2
 └── delivery_history (id, player_name, product_id, customer_id, delivered_at)
 
 ## 📸 Screenshots
-
 ### Database structure
 ![Database structure](gamemodes/Result's screenshots/pawncourse 2 database with customers & delivery history & products tables.png)
+gamemodes/Result's screenshots/pawncourse 2 database with customers & delivery history & products tables.png
 
 
 
