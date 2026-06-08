@@ -1,0 +1,44 @@
+Don't freak out if you chose one product, you finish the delivery and got back in delivery post and see the customers name is still there!
+
+🔍 The Issue:
+You delivered DIFFERENT PRODUCTS to Joe and Sarah:
+
+Documents (product 3) → Sarah (customer 4)
+
+Electronics (product 4) → Joe (customer 3)
+
+So when you select Pizza (product 2) , Joe and Sarah are STILL available because they never received Pizza!
+
+so YEAH it depends on the products now!
+
+The NO-REPEAT system blocks per product, not per customer overall.
+
+📊 How it works:
+Customer	Pizza (ID 2)	          Documents (ID 3)	       Electronics (ID 4)
+Alex (1)	❌ Never delivered	    ❌ Never delivered	    ❌ Never delivered
+Maria (2)	✅ Delivered at 14:58	❌ Never delivered	    ❌ Never delivered
+Joe (3)	    ❌ Never delivered	    ❌ Never delivered	    ✅ Delivered at 16:00
+Sarah (4)	❌ Never delivered	    ✅ Delivered at 15:58	❌ Never delivered
+
+🎯 This means:
+Select Pizza → Available: Alex, Joe, Sarah (Maria blocked for Pizza only)
+
+Select Documents → Available: Alex, Maria, Joe (Sarah blocked for Documents only)
+
+Select Electronics → Available: Alex, Maria, Sarah (Joe blocked for Electronics only)
+
+✅ This is CORRECT behavior!
+A customer can:
+
+Receive Pizza today ✅
+
+Receive Documents tomorrow ✅ (different product)
+
+Receive Electronics next week ✅ (different product)
+
+They just can't receive the SAME product twice within 1 hour.
+
+📝 The Project Requirement says:
+"محصول یکسانی" (same product)
+
+Not "any product" - so your system is 100% correct!

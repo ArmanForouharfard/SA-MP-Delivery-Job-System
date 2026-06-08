@@ -1,0 +1,69 @@
+COMPLETION TRACKER 🎮☐⏳❌✅
+Use this to mark your progress:
+Time to present (14 Days)
+
+Week 1 (Days 1-7):
+0 - ✅ create the checklist & Set up MySQL database and tables
+
+1 - ✅ check the requirements
+    1.2 - ✅ Database: pawncourse2
+    1.3 - ✅ Table 1: products (4 products loaded)
+    1.4 - ✅ Table 2: customers (4 customers loaded)
+    1.5 - ✅ Table 3: delivery_history (empty - will fill as players deliver)
+    1.6 - ✅ Install MySQL plugin -> already had inside the file
+    1.7 - ✅ Test MySQL connection
+
+2 - ✅ Create Actor at start location
+    2.1 - ✅ Implement /deliverhelp command (for starting the mission)
+    2.2 - ✅ Implement /gotodelivery command (to teleport user to the job's location)
+    2.3 - ✅ Implement /deliverprod command (start the job + show product to deliver + select costomers + confirm delivery)
+            2.3.1 - ✅ Show product list dialog
+            2.3.2 - ✅ Show customer list dialog
+            2.3.3 - ✅ Calculate price and show confirmation
+    (moved from  moved from week 2)
+    2.4 - ✅ Create pickup checkpoint (by showing a red field)
+    2.5 - ✅ Create destination checkpoint (by showing a red dot at the mini map and large map in the pause menu)
+    2.6 - ✅ Test delivery and payment (Need vehicle to reach destination)
+
+3 - ✅ Job Vehicle System
+    3.1 - ✅ Add /deliveryvehicle command to spawn job vehicle
+    3.2 - ✅ Add job vehicle (a yellow Truck has been added)
+    3.3 - ✅ Implement vehicle detection system
+    3.4 - ✅ Implement 59-second timer -> 2-minute timer (when leaving vehicle for farest destinations)
+    3.5 - ✅ Destination checkpoint system got checked
+    3.6 - ✅ Payment system (recived 170 $ for pizza delivery)
+    3.7 - ✅ Complete delivery cycle
+    3.8 - ✅ Job cleanup (vehicle disappears after delivery)
+
+4 - Friday: 🧘 REST DAY - No coding!
+
+Week 2 (Days 8-13):
+5 - ✅ Implement NO-REPEAT system (REQUIRED!)
+    5.1 - ✅ Check delivery_history before showing customer list
+    5.2 - ✅ Filter out already-delivered combinations
+    5.3 - ✅ Store delivery records in database
+    5.4 - ✅ Database tracking system
+            5.4.1 - ✅ The customer's list won't get back to default after the user exit from the Game! (It's Normal)
+            5.4.2 - ✅ must find a way change that for the presentation, maybe a Time-based reset may do some good? need to ask from AmirMahdi
+    5.5 - ✅ Errors showed up on Player's Vehicle, (Vehicle position fixed)
+    5.6 - ✅ Building the Hybrid System for No-repeat system
+            5.6.1 - ✅ Implanting Rotation system (block last delivery) while players doing deliveries continuously
+            5.6.2 - ✅ Implanting Time-based reset After reconnecting (or time passed) or their exit
+            5.6.3 - ✅ Hybrid system is now working and it take 1 hour for customers to unlock
+            5.6.6 - ✅ Test 1 hour unlock (wait or change to 1 minute temporarily)
+            5.6.7 - ✅ Test multiple products (Cigarettes, Documents, Electronics)
+    5.7 - ✅ Test 2-minute timer expiration
+    5.8 - ✅ Test vehicle destruction after job completion
+
+6 - ✅ Add optional features if time left (animations, trunk system, etc.):
+    6.1 - ✅ Thank you message/animation
+    6.2 - ✅ Customer Actor at destination
+    6.3 - ✅ Object in hand system
+    6.4 - ❌ Trunk system (Very complex)
+    6.5 - ❌ Delivery animations (High risk of bugs)
+    6.6 - ✅ Core tested, delivery works
+    6.7 - ✅ Screenshots taken for Report
+    6.8 - ✅ Take final screenshots of working system
+    6.9 - ✅ Test everything
+
+Schedule: ✅ AHEAD by 8 days!

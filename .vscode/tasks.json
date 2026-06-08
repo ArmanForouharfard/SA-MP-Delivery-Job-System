@@ -1,0 +1,105 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "isBuildCommand": true,
+    "tasks": [
+        {
+            "label": "Debug Build",
+            "type": "process",
+            "command": "${workspaceRoot}/PawnCompiler/pawncc.exe",
+            "args": [
+                "${file}",
+                "-O0"
+            ],
+            "isBackground": false,
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": {
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(.*)\\((\\d+)\\) : (error|warning) (\\d+): (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "code": 4,
+                    "message": 5,
+                    "column": 100,
+                    "endColumn": 1000,
+                },
+                "owner": "pawn"
+            },
+            "options":{
+                "cwd": "${workspaceRoot}/gamemodes"
+            }
+        },
+        {
+            "label": "Release Build",
+            "type": "process",
+            "command": "${workspaceRoot}/PawnCompiler/pawncc.exe",
+            "args": [
+                "${file}",
+                "-O1"
+            ],
+            "isBackground": false,
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": {
+                "fileLocation": "absolute",
+                "pattern": {
+                  "regexp": "^(.+)\\(([0-9]+)\\) : (warning|error) ([0-9]+): (.+)$",
+                  "file": 1,
+                  "line": 2,
+                  "column": 3,
+                  "severity": 4,
+                  "message": 5
+                },
+                "owner": "pawn"
+            },
+            "options":{
+                "cwd": "${workspaceRoot}/gamemodes"
+            }
+        },
+        {
+            "label": "Run SA-MP Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/samp-server.exe",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": {
+                "regexp": "^.*",  // Match any output to acknowledge task start
+                "file": 0,
+                "line": 0,
+                "message": 0
+                },
+                "background": {
+                "activeOnStart": true,
+                "beginsPattern": ".+",  // Start when any output appears
+                "endsPattern": "FAILED_TO_END"  // Never match (keep task active)
+                }
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        }
+    ]
+}

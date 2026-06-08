@@ -1,0 +1,13 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run SA-MP Server",
+			"type": "node",
+			"request": "launch",
+			"preLaunchTask": "Run SA-MP Server",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen"
+		}
+	]
+}
